@@ -1464,10 +1464,10 @@ function autoBuild()
 						if( game.resPool.resources[unicornsID].value > 0 ) { happiness += .1 };
 						if( happiness <= .8 ) { resourcesExceeded = 1; };
 				
-						/*if you own at least one mine and one aqueduct, then it is okay to build a total of two huts...this allows auto-jobs to assign a miner*/
+						/*if you own at least one mine and fifteen pastures, then it is okay to build a total of two huts...this allows auto-jobs to assign a miner*/
 						if( optionsKittyAssist[7].allowed == 1 )
 						{
-							if( game.bld.buildingsData[mineID].val >= 1 && game.bld.buildingsData[aqueductID].val >= 1 && game.bld.buildingsData[hutID].val == 1 )
+							if( game.bld.buildingsData[mineID].val >= 1 && game.bld.buildingsData[pastureID].val >= 15 && game.bld.buildingsData[hutID].val == 1 )
 							{
 								resourcesExceeded = 0;
 							};
