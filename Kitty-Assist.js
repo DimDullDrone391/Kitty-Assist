@@ -1333,9 +1333,6 @@ function recalculateVariables()
 		};
 		if( yy == zz ) { allRareAvailable = 1 };
 	};
-	
-	/*if manuscripts are being automatically produced (steamworks?) then allow auto-crafting to bypass the furs requirement*/
-	if( game.resPool.resources[manuscriptID].perTickUI >= 0 ) { bypassFurs = 1; } else { bypassFurs = 0; };
 };
 
 
