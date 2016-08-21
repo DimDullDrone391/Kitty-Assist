@@ -1377,7 +1377,7 @@ function autoBuild()
 				if
 				(
 					optionsKittyAssist[6].allowed == 1 &&
-					autoBuildingID == 16 &&
+					autoBuildingID == calcinerID &&
 					game.bld.buildingsData[calcinerID].val == 0 &&
 					game.resPool.resources[titaniumID].perTickUI == 0
 				)
