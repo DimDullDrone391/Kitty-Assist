@@ -991,6 +991,7 @@ for( i = 0; i < game.craftTable.resRows.length; i++ )
 
 
 /*create crafting resource list*/
+/*this is not currently used, but I'm leaving it in because it was a pain to make and I don't want to do it again*/
 crftResourceList[0] = { resourceID: woodID, name: "wood", craftResources: [ ] };
 crftResourceList[0].craftResources[0] = { resourceID: catnipID, name: "catnip" };
 crftResourceList[1] = { resourceID: beamID, name: "beam", craftResources: [ ] };
