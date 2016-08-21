@@ -9,7 +9,7 @@ It is bug free, guaranteed to do everything correctly, and a lot less likely to 
 The reasons I use my auto-clicker instead of Kitten Scientists:  
 My auto-clicker tells you what it is building next and how long it is estimated to take. It also allows you to set the maximum allowed time...the project will be skipped if it's estimated to take longer.  
   
-This auto-clicker can also be used as a learning tool (which is how I used it). I tried to use very basic code and stayed as granular as possible with my formulas. If you are interested in how Kittens works, reading through my code could provide insight. The function updateCatnipVariables() is a good example. It should be able to walk you through all of the aspects that determine Catnip production. Just keep in mind that I did use this as a learning tool and my code does not follow the standard programming guidelines (i.e. - it's somewhat messy).  
+This auto-clicker can also be used as a learning tool (which is how I used it). I tried to use very basic code and stayed as granular as possible with my formulas. If you are interested in how Kittens works, reading through my code could provide insight. The function updateCatnipVariables() is a good example. It should be able to walk you through all of the aspects that determine Catnip production. Just keep in mind that I did use this as a learning tool and my code does not follow the standard programming formatting rules (i.e. - it's somewhat messy).  
   
 Almost everything in this auto-clicker is optional and can be enabled/disabled on the fly.  
   
