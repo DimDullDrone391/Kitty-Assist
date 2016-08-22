@@ -2404,7 +2404,11 @@ function autoBuildEarth()
 				autoBuildMessage();
 				game.msg( autoMsg, "building" );
 				clearInterval( intervalBuildControl );
-				returnProcedure()
+				/*I had to add in a delay because the resource tracker in the auto-crafting function only runs once per second*/
+				delayInterval = 2000;
+				delayProcedure = returnProcedure;
+				delayFunction();
+				/*returnProcedure();*/
 			};
 		};
 	};
@@ -2467,7 +2471,11 @@ function autoBuildMissions()
 			autoBuildMessage();
 			game.msg( autoMsg, "building" );
 			clearInterval( intervalBuildControl );
-			returnProcedure()
+			/*I had to add in a delay because the resource tracker in the auto-crafting function only runs once per second*/
+			delayInterval = 2000;
+			delayProcedure = returnProcedure;
+			delayFunction();
+			/*returnProcedure();*/
 		};
 	};
 };
@@ -2525,7 +2533,11 @@ function autoBuildSpace()
 				autoBuildMessage();
 				game.msg( autoMsg, "building" );
 				clearInterval( intervalBuildControl );
-				returnProcedure()
+				/*I had to add in a delay because the resource tracker in the auto-crafting function only runs once per second*/
+				delayInterval = 2000;
+				delayProcedure = returnProcedure;
+				delayFunction();
+				/*returnProcedure();*/
 			};
 		};
 	};
