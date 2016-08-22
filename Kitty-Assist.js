@@ -2269,7 +2269,7 @@ function autoHuntTrade()
 				Math.floor( game.resPool.resources[catpowerID].maxValue ) - Math.floor( game.resPool.resources[catpowerID].value ) <= Math.floor( game.resPool.resources[catpowerID].perTickUI )
 			)
 			{
-				game.msg( "You are being hunted.", "notice" );
+				game.msg( "Stalking the wild catnip.", "notice" );
 				civID = 1;
 				game.village.huntAll();
 				nextTabImmediately = 0;
