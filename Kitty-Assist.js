@@ -594,7 +594,7 @@ optionsKittyAssist[4] = { activity: "Leader Rank Increases Kitten Efficiency", a
 optionsKittyAssist[5] = { activity: "Auto-Control Steamworks", allowed: 1 };
 optionsKittyAssist[6] = { activity: "Auto-Build 1st Calciner", allowed: 1 };
 optionsKittyAssist[7] = { activity: "Auto-Build 2nd Hut", allowed: 1 };
-optionsKittyAssist[8] = { activity: "Alternate crafting of Parchments & Manuscripts", allowed: 1 };
+optionsKittyAssist[8] = { activity: "Alternate crafting of Parchments & Manuscripts", allowed: 0 };
 
 /*the array that allows the player to set job ratios and max kittens allowed in each job*/
 jobList[woodcutterID] = { name: "woodcutter", maxKittens: 50000, playerEnteredRatio: 14, kittensToAdd: 0 };
