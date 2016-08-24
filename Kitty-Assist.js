@@ -3204,10 +3204,10 @@ function craftResources()
 					game.resPool.resources[fursID].perTickUI <= 0 &&
 					resourceList[parchmentID].available == 1 &&
 					workshopList[printingPressID].researched == 0 &&
-					game.resPool.resources[fursID].value > 0
+					game.resPool.resources[fursID].value > game.craftTable.resRows[parchmentCraftID].recipeRef.prices[0].val
 				)
 				{
-					game.workshop.craft( "parchment", game.resPool.resources[fursID].value / game.craftTable.resRows[parchmentCraftID].recipeRef.prices[0].val );
+					game.workshop.craft( "parchment", Math.floor( game.resPool.resources[fursID].value / game.craftTable.resRows[parchmentCraftID].recipeRef.prices[0].val ) );
 				} else
 				{
 					resourceList[parchmentID].perSecProduction = game.resPool.resources[parchmentID].perTickUI * 5;
@@ -3244,8 +3244,8 @@ function craftResources()
 						"manuscript",
 						Math.min
 						(
-							game.resPool.resources[parchmentID].value / game.craftTable.resRows[manuscriptCraftID].recipeRef.prices[0].val,
-							game.resPool.resources[cultureID].value / game.craftTable.resRows[manuscriptCraftID].recipeRef.prices[1].val
+							Math.floor( game.resPool.resources[parchmentID].value / game.craftTable.resRows[manuscriptCraftID].recipeRef.prices[0].val ),
+							Math.floor( game.resPool.resources[cultureID].value / game.craftTable.resRows[manuscriptCraftID].recipeRef.prices[1].val )
 						)
 					);
 				} else
