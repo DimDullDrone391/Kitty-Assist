@@ -594,6 +594,7 @@ optionsKittyAssist[4] = { activity: "Leader Rank Increases Kitten Efficiency", a
 optionsKittyAssist[5] = { activity: "Auto-Control Steamworks", allowed: 1 };
 optionsKittyAssist[6] = { activity: "Auto-Build 1st Calciner", allowed: 1 };
 optionsKittyAssist[7] = { activity: "Auto-Build 2nd Hut", allowed: 1 };
+optionsKittyAssist[8] = { activity: "Alternate crafting of Parchments & Manuscripts", allowed: 1 };
 
 /*the array that allows the player to set job ratios and max kittens allowed in each job*/
 jobList[woodcutterID] = { name: "woodcutter", maxKittens: 50000, playerEnteredRatio: 14, kittensToAdd: 0 };
@@ -3197,7 +3198,20 @@ function craftResources()
 				resourceList[parchmentID].perSecProduction += game.resPool.resources[parchmentID].perTickUI * 5;
 			} else
 			{
-				resourceList[parchmentID].perSecProduction = game.resPool.resources[parchmentID].perTickUI * 5;
+				if
+				(
+					optionsKittyAssist[8].allowed == 1 &&
+					game.resPool.resources[fursID].perTickUI <= 0 &&
+					resourceList[parchmentID].available == 1 &&
+					workshopList[printingPressID].researched == 0 &&
+					game.resPool.resources[fursID].value > 0
+				)
+				{
+					game.workshop.craft( "parchment", game.resPool.resources[fursID].value / game.craftTable.resRows[parchmentCraftID].recipeRef.prices[0].val );
+				} else
+				{
+					resourceList[parchmentID].perSecProduction = game.resPool.resources[parchmentID].perTickUI * 5;
+				};
 			};
 			
 			/*manuscript*/
@@ -3215,7 +3229,29 @@ function craftResources()
 				resourceList[manuscriptID].perSecProduction += game.resPool.resources[manuscriptID].perTickUI * 5;
 			} else
 			{
-				resourceList[manuscriptID].perSecProduction = game.resPool.resources[manuscriptID].perTickUI * 5;
+				if
+				(
+					optionsKittyAssist[8].allowed == 1 &&
+					game.resPool.resources[parchmentID].perTickUI == 0 &&
+					resourceList[manuscriptID].available == 1 &&
+					workshopList[printingPressID].researched == 0 &&
+					game.resPool.resources[parchmentID].value > 0 &&
+					game.resPool.resources[cultureID].value > 0
+				)
+				{
+					game.workshop.craft
+					(
+						"manuscript",
+						Math.min
+						(
+							game.resPool.resources[parchmentID].value / game.craftTable.resRows[manuscriptCraftID].recipeRef.prices[0].val,
+							game.resPool.resources[cultureID].value / game.craftTable.resRows[manuscriptCraftID].recipeRef.prices[1].val
+						)
+					);
+				} else
+				{
+					resourceList[manuscriptID].perSecProduction = game.resPool.resources[manuscriptID].perTickUI * 5;
+				};
 			};
 			
 			/*compendium*/
