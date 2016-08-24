@@ -3198,22 +3198,7 @@ function craftResources()
 				resourceList[parchmentID].perSecProduction += game.resPool.resources[parchmentID].perTickUI * 5;
 			} else
 			{
-				if
-				(
-					optionsKittyAssist[8].allowed == 1 &&
-					game.resPool.resources[fursID].perTickUI <= 0 &&
-					resourceList[parchmentID].available == 1 &&
-					workshopList[printingPressID].researched == 0 &&
-					game.resPool.resources[fursID].value > 0
-				)
-				{
-					craftingQuantityParchment = ( game.resPool.resources[fursID].value / game.craftTable.resRows[parchmentCraftID].recipeRef.prices[0].val ) * ( 1 + adjustRefineRate );
-					game.resPool.resources[parchmentID].value += craftingQuantityParchment;
-					game.resPool.resources[fursID].value = 0;
-				} else
-				{
-					resourceList[parchmentID].perSecProduction = game.resPool.resources[parchmentID].perTickUI * 5;
-				};
+				resourceList[parchmentID].perSecProduction = game.resPool.resources[parchmentID].perTickUI * 5;
 			};
 			
 			/*manuscript*/
@@ -3231,43 +3216,7 @@ function craftResources()
 				resourceList[manuscriptID].perSecProduction += game.resPool.resources[manuscriptID].perTickUI * 5;
 			} else
 			{
-				if
-				(
-					optionsKittyAssist[8].allowed == 1 &&
-					game.resPool.resources[parchmentID].perTickUI == 0 &&
-					resourceList[manuscriptID].available == 1 &&
-					workshopList[printingPressID].researched == 0 &&
-					game.resPool.resources[parchmentID].value > 0 &&
-					game.resPool.resources[cultureID].value > 0 &&
-					craftingQuantityParchment > 0
-				)
-				{
-					craftingQuantityManuscript =
-						Math.min
-						(
-							( craftingQuantityParchment / 2 ) / game.craftTable.resRows[manuscriptCraftID].recipeRef.prices[0].val,
-							game.resPool.resources[cultureID].value / game.craftTable.resRows[manuscriptCraftID].recipeRef.prices[1].val
-						);
-					game.resPool.resources[manuscriptID].value += craftingQuantityManuscript * ( 1 + adjustRefineRate );
-					craftingQuantityParchment = 0;
-					if( craftingQuantityManuscript * game.craftTable.resRows[manuscriptCraftID].recipeRef.prices[0].val > game.resPool.resources[parchmentID].value )
-					{
-						game.resPool.resources[parchmentID].value = 0;
-					} else
-					{
-						game.resPool.resources[parchmentID].value -= craftingQuantityManuscript * game.craftTable.resRows[manuscriptCraftID].recipeRef.prices[0].val;
-					};
-					if( craftingQuantityManuscript * game.craftTable.resRows[manuscriptCraftID].recipeRef.prices[1].val > game.resPool.resources[cultureID].value )
-					{
-						game.resPool.resources[cultureID].value = 0;
-					} else
-					{
-						game.resPool.resources[cultureID].value -= craftingQuantityManuscript * game.craftTable.resRows[manuscriptCraftID].recipeRef.prices[1].val;
-					};
-				} else
-				{
-					resourceList[manuscriptID].perSecProduction = game.resPool.resources[manuscriptID].perTickUI * 5;
-				};
+				resourceList[manuscriptID].perSecProduction = game.resPool.resources[manuscriptID].perTickUI * 5;
 			};
 			
 			/*compendium*/
