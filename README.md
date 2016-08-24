@@ -37,7 +37,6 @@ startKittyAssist()
   
 **The options which you can turn on or off.**  
 **(Leader Rank Increases Kitten Efficiency is disabled by default)**  
-**(Alternate crafting of Parchments & Manuscripts is disabled by default)**  
     optionsKittyAssist[0] = { activity: "Auto-Promote Leader", allowed: 1 };  
     optionsKittyAssist[1] = { activity: "Auto-Craft Resources", allowed: 1 };  
     optionsKittyAssist[2] = { activity: "Auto-Trade With Other Civilizations", allowed: 1 };  
@@ -46,7 +45,6 @@ startKittyAssist()
     optionsKittyAssist[5] = { activity: "Auto-Control Steamworks", allowed: 1 };  
     optionsKittyAssist[6] = { activity: "Auto-Build 1st Calciner", allowed: 1 };  
     optionsKittyAssist[7] = { activity: "Auto-Build 2nd Hut", allowed: 1 };  
-    optionsKittyAssist[8] = { activity: "Alternate crafting of Parchments & Manuscripts", allowed: 0 };  
   
 **The order in which Kitty Assist will attempt each of the activities.**  
 **To disable an activity you must remove it from this array.**  
