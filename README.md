@@ -1,3 +1,8 @@
+**Notice - 8/26/16**  
+Updates to the Kittens source code have caused this auto-clicker to develop a bug. At this time I do not know why it happens or if it has multiple effects (I know it has at least one).  
+  
+---------------------------------------------------------------  
+  
 This is a BETA version.  
 There is no GUI and it requires at least a basic understanding of entering commands in the browser console.  
 In order to use the script you will need to copy-and-paste it into the browser console.  
