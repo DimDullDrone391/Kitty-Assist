@@ -1,5 +1,8 @@
-**Notice - 8/26/16**  
-Updates to the Kittens source code have caused this auto-clicker to develop a bug. At this time I do not know why it happens or if it has multiple effects (I know it has at least one).  
+**Notice - 8/27/16**  
+Because Kittens is being updated several times per week, I have decided not to continue updating and troubleshooting. It is difficult to proceed when you don't know if a bug is caused by a mistake or because the source code changed when you weren't looking.  
+  
+If you want an auto-clicker, I recommend that you use Kitten Scientists  
+( https://github.com/cameroncondry/cbc-kitten-scientists )  
   
 ---------------------------------------------------------------  
   
